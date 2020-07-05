@@ -1,4 +1,5 @@
 import sys
+import os
 
 class Rpn():
     
@@ -44,7 +45,7 @@ class Rpn():
             None
 
         """
-        sys.stdout.flush()
+        os.system("clear")
         return
 
     def left(self):
