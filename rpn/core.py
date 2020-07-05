@@ -4,10 +4,7 @@ import os
 class Rpn():
     
     def __init__(self):
-        """ Parameters
-            ----------
-            arg1 : string
-                Expression that need to be calculated
+        """ Reverse Polish Notation 
         """
         self.run()
         
