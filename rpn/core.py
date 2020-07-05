@@ -18,12 +18,12 @@ class Rpn():
     def calc(self, expr):
         """ Parameters
             ----------
-            None
+            expr : string
+                Epression that need to be calculated
 
             Returns
             ----------
-            int
-                Result of the calculation
+            None
 
         """
         res = []
@@ -32,16 +32,49 @@ class Rpn():
                 t = str(res.pop(-2)) + t + str(res.pop())
             res.append(eval(t))
         print('%d' % res[0]) if res else print(0)
+        return
 
     def clear(self):
+        """ Parameters
+            ----------
+            None
+
+            Returns
+            ----------
+            None
+
+        """
         sys.stdout.flush()
         return
 
     def left(self):
+        """ Parameters
+            ----------
+            None
+
+            Returns
+            ----------
+            None
+
+        """
         exit(0)
 
     def helper(self):
-        help()
+        """ Parameters
+            ----------
+            None
+
+            Returns
+            ----------
+            None
+
+        """
+        print("Usage: [expr]\n")
+        print("This is a Reverse Polish Notation Calculator\n")
+        print("Additional commands are: clear, quit, help")
+        print("clear -> reset the calculator")
+        print("quit  -> quit the calculator")
+        print("help  -> show this help message")
         return
     
     method_dict = {
